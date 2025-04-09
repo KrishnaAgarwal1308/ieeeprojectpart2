@@ -4,7 +4,6 @@ const userSchema =mongoose.Schema({
     fullName:String,
     email:String,
     password:String,
-    admin:Boolean,
     contact:Number,
     cart:{
         type:Array,

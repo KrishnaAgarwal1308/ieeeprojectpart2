@@ -1,14 +1,14 @@
 const mongoose =require('mongoose')
 
 const productSchema=mongoose.Schema({
-    image:String,
+    image:Buffer,
     name:String,
     discount:{
         type:Number,default:0},
     price:Number,
-    bgColor:String,
-    pannelColor:String,
-    text:String
+    bgcolor:String,
+    pannelcolor:String,
+    textcolor:String
 })
 
 module.exports=mongoose.model('product',productSchema)

@@ -1,7 +1,17 @@
 const express=require('express')
 const route=express.Router()
-
-route.get('/',(req,res) => {
-    res.send('hey its not working')
+const upload=require('../config/multer-config')
+const productModel=require('../models/user-model')
+route.post('/create',upload.single('image'),async(req,res) => {
+    let {name,price,discount,bgcolor,panelcolor,textcolor}=req.body
+    let product=await productModel.create({
+        image:req.file.buffer,
+        name,
+        discount,
+        price,
+        bgcolor,
+        panelcolor,
+        textcolor
+    })
 })
 module.exports=route

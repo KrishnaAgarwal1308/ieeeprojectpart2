@@ -1,1 +1,5 @@
 node_modules
+some cut snippets
+.env
+public
+package-lock.json
