@@ -1,5 +1,4 @@
 node_modules
+public
 some cut snippets
 .env
-public
-package-lock.json
